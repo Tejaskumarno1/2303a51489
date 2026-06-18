@@ -1,15 +1,13 @@
 {
   "name": "@affordmed/logger",
   "version": "1.0.0",
-  "main": "src/logger.ts",
+  "main": "dist/logger.js",
+  "types": "dist/logger.d.ts",
   "scripts": {
     "build": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "dotenv": "^17.4.2"
+    "@types/node": "^25.9.3",
+    "typescript": "^6.0.3"
   }
 }
