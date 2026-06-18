@@ -1,7 +1,7 @@
 import { Stack, Level, Package } from "./types";
 
 const LOG_API_URL = "http://4.224.186.213/evaluation-service/logs";
-const AUTH_TOKEN = process.env.AFFORDMED_TOKEN || "";
+const AUTH_TOKEN = process.env.AFFORDMED_TOKEN ||""; 
 
 export async function Log(
   stack: Stack,
@@ -9,6 +9,8 @@ export async function Log(
   pkg: Package,
   message: string
 ): Promise<void> {
+  // console.log("debug log:", message) 
+
   try {
     const response = await fetch(LOG_API_URL, {
       method: "POST",
@@ -18,10 +20,11 @@ export async function Log(
       },
       body: JSON.stringify({ stack, level, package: pkg, message }),
     });
+    
     if (!response.ok) {
-      // Silently fail — never use console here
+      // silent fail
     }
-  } catch {
-    // Network error — swallow silently
+  } catch (e: any) {
+    // console.error(e)
   }
 }
