@@ -53,3 +53,9 @@ export async function getTopNPriority(n: number): Promise<Notification[]> {
   Log("backend", "info", "service", `Returning top ${topN.length} priority notifications`);
   return topN;
 }
+
+// Efficient maintenance: how to keep top N as new notifications arrive
+// Use a min-heap of size N. For each new notification:
+// - If heap.size < N: push it
+// - Else if priorityScore(new) > heap.min: pop min, push new
+// This is O(log N) per insertion vs O(n log n) full resort
