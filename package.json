@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  },
+  "name": "2303a51489",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tejaskumarno1/2303a51489.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tejaskumarno1/2303a51489/issues"
+  },
+  "homepage": "https://github.com/Tejaskumarno1/2303a51489#readme"
+}
